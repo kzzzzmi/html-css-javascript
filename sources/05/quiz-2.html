@@ -1,29 +1,74 @@
 <!DOCTYPE html>
 <html lang="ko">
   <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
     <title>연습문제 2</title>
     <style>
-			#container { 
-				width:520px;
-				border:1px solid black;
-				padding:20px 40px;
-				margin:0 auto;
-			}
-      fieldset { margin-bottom:15px; }
-      legend { font-weight:bold; }
-			ul {list-style-type: none;}
-			li { line-height:30px;}
+      #container {
+        width: 520px;
+        border: 1px solid black;
+        padding: 20px 40px;
+        margin: 0 auto;
+      }
+      fieldset {
+        margin-bottom: 15px;
+      }
+      legend {
+        font-weight: bold;
+      }
+      ul {
+        list-style-type: none;
+      }
+      li {
+        line-height: 30px;
+      }
     </style>
   </head>
   <body>
-		<div id="container">
-			<h1>프런트엔드 개발자 지원서 </h1>
-			<p>HTML, CSS, Javascript에 대한 기술적 이해와 경험이 있는 분을 찾습니다.</p>
-			<hr>
-			<form>
-				
-			</form>
-		</div>
+    <div id="container">
+      <h1>프런트엔드 개발자 지원서</h1>
+      <p>
+        HTML, CSS, Javascript에 대한 기술적 이해와 경험이 있는 분을 찾습니다.
+      </p>
+      <hr />
+      <form>
+        <p><b>개인 정보</b></p>
+        <ul>
+          <li>
+            <label for="f-name">이름</label>
+            <input type="text" id="f-name" placeholder="공백 없이 입력하세요" />
+          </li>
+          <li>
+            <label for="f-tel">연락처</label>
+            <input type="tel" id="f-tel" />
+          </li>
+        </ul>
+        <p><b>지원 분야</b></p>
+        <ul>
+          <li>
+            <input id="first" type="radio" name="wldnjs" value="aa" />
+            <label for="first">웹 퍼블리싱</label>
+          </li>
+          <li>
+            <input id="second" type="radio" name="wldnjs" value="bb" />
+            <label for="second">웹 애플리케이션 개발</label>
+          </li>
+          <li>
+            <input id="third" type="radio" name="wldnjs" value="cc" />
+            <label for="third">개발 환경 개선</label>
+          </li>
+        </ul>
+        <p><b>지원 동기</b></p>
+        <textarea
+          cols="60"
+          rows="5"
+          placeholder="본사 지원 동기를 간략히 써 주세요."
+        ></textarea>
+        <div>
+          <input type="submit" value="접수하기" />
+          <button type="reset">다시 쓰기</button>
+        </div>
+      </form>
+    </div>
   </body>
 </html>
