@@ -1,19 +1,50 @@
 <!DOCTYPE html>
 <html lang="ko">
   <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
     <title>회원 가입</title>
     <style>
       #container {
-        width:600px;
-        margin:10px auto;
+        width: 600px;
+        margin: 10px auto;
       }
     </style>
   </head>
-  <body> 
+  <body>
     <div id="container">
       <h1>회원 가입을 환영합니다</h1>
-      
-    </div>           
+      <form>
+        <fieldset>
+          <legend>사용자 정보</legend>
+          <ul>
+            <li>
+              <label for="user-id">아이디</label>
+              <input type="text" id="user-id" />
+            </li>
+            <li>
+              <label for="email">이메일</label>
+              <input type="email" id="email" />
+            </li>
+            <li>
+              <label for="user-password">비밀번호</label>
+              <input type="text" id="user-password" />
+            </li>
+            <li>
+              <label for="passwordcheck">비밀번호 확인</label>
+              <input type="text" id="passwordcheck" />
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset>
+          <legend>이벤트와 새로운 소식</legend>
+          <input type="radio" name="email-check" id="ok" />
+          <label for="ok">메일 수신</label>
+          <input type="radio" name="email-check" id="no" checked />
+          <label for="no">메일 수신 안 함</label>
+        </fieldset>
+        <input type="submit" value="가입하기" />
+        <input type="reset" value="취소" />
+      </form>
+    </div>
   </body>
 </html>
