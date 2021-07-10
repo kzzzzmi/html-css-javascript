@@ -1,5 +1,33 @@
 * {
-  margin:0;
-  padding:0;
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
+}
+#container {
+  width: 1200px;
+  margin: 20px auto;
+}
+#header {
+  background-color: beige;
+  height: 120px;
+  width: 100%;
+}
+#sidebar,
+#contents {
+  float: left;
+  height: 600px;
+}
+#sidebar {
+  width: 25%;
+  background-color: tomato;
+}
+#contents {
+  width: 75%;
+  background-color: teal;
+}
+#footer {
+  clear: both;
+  height: 100px;
+  background-color: thistle;
+  width: 100%;
 }
