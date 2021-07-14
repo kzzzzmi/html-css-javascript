@@ -1,15 +1,31 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>연습문제 1</title>
-</head>
-<body>
-	<h2>4의 배수일까 아닐까</h2>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>연습문제 1</title>
+  </head>
+  <style>
+    h4 {
+      color: red;
+      text-align: center;
+    }
+  </style>
+  <body>
+    <h2>4의 배수일까 아닐까</h2>
 
-	<script>
-	
-	</script>
-</body>
+    <script>
+      var num = prompt("몇까지 3의 배수를 찾을까요?");
+      var i = 3;
+      var current = 0;
+      while (i <= num) {
+        document.write(i + ", ");
+        i += 3;
+        current++;
+      }
+      document.write(
+        "<h4>" + num + "까지 3의 배수의 개수 : " + current + "</h4>"
+      );
+    </script>
+  </body>
 </html>
