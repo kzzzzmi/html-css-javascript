@@ -1,18 +1,39 @@
 <!DOCTYPE html>
 <html lang="ko">
   <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
     <title>당첨자 발표</title>
     <style>
       h1 {
-        border:1px solid black;
-        padding:10px;
-        text-align:center;
-        background:#eee;
+        border: 1px solid black;
+        padding: 10px;
+        text-align: center;
+        background: #eee;
       }
     </style>
   </head>
-  <body>    
+  <body>
     <h1>당첨자 발표</h1>
+    <script>
+      let num = prompt("전체 응모자 수 : ");
+      let choice = prompt("당첨자 수 : ");
+      let lucky = new Array();
+
+      document.write("전체 응모자 수 : " + num + "명");
+      document.write("<br>");
+      document.write("당첨자 : ");
+      for (let i = 0; i < choice; i++) {
+        lucky[i] = Math.floor(Math.random() * num + 1);
+        for (let j = 0; j < i; j++) {
+          if (lucky[i] === lucky[j]) {
+            i--;
+            break;
+          }
+        }
+      }
+      for (let i = 0; i < choice; i++) {
+        document.write(lucky[i] + "번, ");
+      }
+    </script>
   </body>
 </html>
