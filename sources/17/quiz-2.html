@@ -1,11 +1,57 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>연습문제 2</title>
-</head>
-<body>
-	
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>연습문제 2</title>
+    <style>
+      form {
+        margin-bottom: 30px;
+      }
+      input[type="text"] {
+        width: 30px;
+        height: 20px;
+        text-align: center;
+      }
+      button {
+        margin-left: 10px;
+      }
+      table {
+        border: 1px solid black;
+        border-collapse: collapse;
+      }
+      tr,
+      td {
+        border: 1px solid black;
+        padding: 5px 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <form>
+      <input type="text" class="row-button" value="1" />행
+      <input type="text" class="column-button" value="1" />열
+      <button onclick="drawTable(); return false;">작성</button>
+    </form>
+    <div class="contents"></div>
+    <script>
+      function drawTable() {
+        let rows = document.querySelector(".row-button").value;
+        let cols = document.querySelector(".column-button").value;
+        let newtable = document.createElement("table");
+
+        for (let i = 0; i < rows; i++) {
+          let newRow = document.createElement("tr");
+          for (let j = 0; j < cols; j++) {
+            let newCol = document.createElement("td");
+            let newText = document.createTextNode(i + ", " + j);
+            newCol.appendChild(newText);
+            newRow.appendChild(newCol);
+          }
+          newtable.appendChild(newRow);
+        }
+        document.querySelector(".contents").appendChild(newtable);
+      }
+    </script>
+  </body>
 </html>
