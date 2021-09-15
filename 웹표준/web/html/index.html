@@ -1,12 +1,97 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>
-  
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>html 첫 문서</title>
+    <style>
+      table {
+        border: 1px solid black;
+        border-collapse: collapse;
+        background-color: darkgray;
+        text-align: center;
+        margin-bottom: 30px;
+      }
+      td {
+        border: 1px solid black;
+        width: 100px;
+        height: 100px;
+      }
+      th {
+        border: 1px solid black;
+        width: 100px;
+        height: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <caption>
+        선물용과 가정용 상품 구성
+      </caption>
+      <thead>
+        <tr>
+          <th>용도</th>
+          <th>중량</th>
+          <th>갯수</th>
+          <th>가격</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th>선물용</th>
+          <td>3kg</td>
+          <td>11~16과</td>
+          <td>35,000원</td>
+        </tr>
+        <tr>
+          <th>선물용</th>
+          <td>3kg</td>
+          <td>11~16과</td>
+          <td>35,000원</td>
+        </tr>
+        <tr>
+          <th>선물용</th>
+          <td>3kg</td>
+          <td>11~16과</td>
+          <td>35,000원</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <table>
+      <tr>
+        <td></td>
+        <td></td>
+        <td rowspan="2"></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td colspan="2"></td>
+        <td></td>
+        <td colspan="2"></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td rowspan="2"></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    </table>
+  </body>
 </html>
