@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100&display=swap');
+
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  font-weight: 400;
+  font-size: 40px;
+  color: rgba(30, 180, 250, 0.8);
+  text-align: center;
+}
+
+#naver_logo {
+  text-decoration: none;
+  color: #19ce60;
+  font-size: 50px;
+  font-weight: 900;
+  text-shadow: -1px -4px 20px black;
+}
