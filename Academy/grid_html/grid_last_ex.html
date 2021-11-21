@@ -20,12 +20,12 @@
           "footer footer footer";
       }
 
-      .container div {
+      .container > div {
         border: 1px solid black;
         background-color: cyan;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        text-align: center;
+        padding: 20px;
+        font-size: 30px;
       }
 
       .header {
@@ -38,6 +38,17 @@
 
       .main {
         grid-area: main;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 5px;
+      }
+
+      .main div {
+        border: 1px solid black;
+        background-color: greenyellow;
+        display: grid;
+        justify-items: center;
+        align-items: center;
       }
 
       .top {
@@ -61,7 +72,12 @@
     <div class="container">
       <div class="header">header</div>
       <div class="menu">menu</div>
-      <div class="main">main</div>
+      <div class="main">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+      </div>
       <div class="top">top</div>
       <div class="aside">aside</div>
       <div class="bottom">bottom</div>
