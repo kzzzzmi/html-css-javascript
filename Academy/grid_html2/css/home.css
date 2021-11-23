@@ -1,0 +1,47 @@
+.container {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 150px 1fr 150px;
+  grid-template-rows: 150px 400px 1fr 100px;
+  grid-template-areas:
+    "header header header"
+    "welcome welcome welcome"
+    "benner main aside"
+    "footer footer footer";
+}
+
+.container div {
+  border: 2px solid black;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+}
+
+.header {
+  grid-area: header;
+  background-color: bisque;
+}
+
+.welcome {
+  grid-area: welcome;
+  background-color: cornflowerblue;
+}
+
+.benner {
+  grid-area: benner;
+}
+
+.main {
+  grid-area: main;
+  display: block;
+  padding: 10px;
+  text-align: start;
+}
+
+.aside {
+  grid-area: aside;
+}
+
+.footer {
+  grid-area: footer;
+}

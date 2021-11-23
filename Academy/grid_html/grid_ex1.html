@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        display: grid;
+        gap: 10px;
+        grid-template-areas:
+          "a b b"
+          "a e c"
+          "d d c";
+        height: 100vh;
+      }
+
+      .container div {
+        background-color: orange;
+        font-size: 30px;
+        display: grid;
+        justify-items: center;
+        align-items: center;
+      }
+
+      .a {
+        grid-area: a;
+        grid-template-areas:
+          "a_a a_b"
+          "a_c a_c";
+      }
+
+      .b {
+        grid-area: b;
+      }
+
+      .c {
+        grid-area: c;
+      }
+
+      .d {
+        grid-area: d;
+      }
+
+      .e {
+        grid-area: e;
+      }
+
+      .a div {
+        background-color: tomato;
+        border: 1px solid black;
+        justify-self: stretch;
+        align-self: stretch;
+      }
+
+      .a div:first-child {
+        grid-area: a_a;
+      }
+
+      .a div:nth-child(2) {
+        grid-area: a_b;
+      }
+
+      .a div:last-child {
+        grid-area: a_c;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="a">
+        <div class="a_a">sub1</div>
+        <div class="a_b">sub2</div>
+        <div class="a_c">sub3</div>
+      </div>
+      <div class="b">2</div>
+      <div class="c">3</div>
+      <div class="d">4</div>
+      <div class="e">5</div>
+    </div>
+  </body>
+</html>
