@@ -1,0 +1,100 @@
+* {
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+  border-radius: 15px;
+}
+
+body {
+  background-color: antiquewhite;
+}
+
+.container {
+  height: 100vh;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+}
+
+.gallery {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+}
+
+.gallery-font {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.pictures {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-areas:
+    "picture1 picture1 picture2 picture3 picture4 picture5"
+    "picture1 picture1 picture6 picture7 picture8 picture9";
+  gap: 10px;
+  justify-items: center;
+  align-items: center;
+  padding: 30px;
+  box-sizing: border-box;
+}
+
+.picture1 {
+  grid-area: picture1;
+}
+.picture2 {
+  grid-area: picture2;
+}
+.picture3 {
+  grid-area: picture3;
+}
+.picture4 {
+  grid-area: picture4;
+}
+.picture5 {
+  grid-area: picture5;
+}
+.picture6 {
+  grid-area: picture6;
+}
+.picture7 {
+  grid-area: picture7;
+}
+.picture8 {
+  grid-area: picture8;
+}
+.picture9 {
+  grid-area: picture9;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .pictures {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas:
+      "picture1 picture1 picture2 "
+      "picture1 picture1 picture3 "
+      "picture4 picture5 picture6"
+      "picture7 picture8 picture9";
+  }
+}
+
+@media (max-width: 767px) {
+  .pictures {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-areas:
+      "picture1 picture1"
+      "picture1 picture1 "
+      "picture2 picture3 "
+      "picture4 picture5 "
+      "picture6 picture7 "
+      "picture8 picture9 ";
+  }
+}
