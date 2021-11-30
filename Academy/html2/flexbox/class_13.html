@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .parent {
+        border: 5px solid green;
+        display: flex;
+      }
+
+      .parent div {
+        height: 200px;
+        color: #fff;
+        text-align: center;
+        line-height: 200px;
+        background-color: crimson;
+      }
+
+      /* 
+        자식요소에서 사용하는 단축 속성
+         flex: [증감 너비] [감소 너비] [기본 너비]
+         flex: [flex-grow] [flex-shrink] [flex-basis]
+
+         flex: 1 == flex-grow: 1
+      */
+
+      .child1 {
+        margin: 2px;
+        flex: 1;
+      }
+
+      .child2 {
+        margin: 2px;
+        flex: 4;
+        background-color: darkcyan;
+      }
+
+      .child3 {
+        margin: 2px;
+        flex: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parent">
+      <div class="child1">child1</div>
+      <div class="child2">child2</div>
+      <div class="child3">child3</div>
+    </div>
+  </body>
+</html>

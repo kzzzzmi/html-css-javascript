@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .parent {
+        border: 5px solid green;
+        display: flex;
+      }
+
+      .parent div {
+        height: 200px;
+        color: #fff;
+        text-align: center;
+        line-height: 200px;
+        background-color: crimson;
+      }
+
+      /* 
+        flex-shrink 기본값 1
+        플렉스 자식요소의 감소 너비 비율을 설정
+        잘 사용하진 않음
+      */
+
+      .child1 {
+        flex-grow: 1;
+        margin: 2px;
+        flex-shrink: 3;
+      }
+
+      .child2 {
+        flex-grow: 1;
+        margin: 2px;
+        flex-shrink: 3;
+      }
+
+      .child3 {
+        flex-grow: 1;
+        margin: 2px;
+        flex-shrink: 3;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parent">
+      <div class="child1">child1</div>
+      <div class="child2">child2</div>
+      <div class="child3">child3</div>
+    </div>
+  </body>
+</html>
