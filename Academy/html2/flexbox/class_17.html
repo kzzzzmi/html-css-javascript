@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        margin: 0;
+      }
+
+      .navbar {
+        background-color: #eee;
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .logo {
+        background-color: yellow;
+        flex-basis: 200px;
+      }
+
+      .menu {
+        display: flex;
+        flex-basis: 400px;
+      }
+
+      .menu div {
+        flex: 1;
+      }
+
+      .menu div:first-child {
+        background-color: tomato;
+      }
+
+      .menu div:last-child {
+        background-color: cyan;
+      }
+
+      @media screen and (max-width: 768px) {
+        .navbar {
+          flex-direction: column;
+        }
+
+        .logo {
+          flex-basis: 50px;
+        }
+
+        .menu {
+          flex-direction: column;
+          flex-basis: 100px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="navbar">
+      <section class="logo">logo</section>
+      <section class="menu">
+        <div>gnb</div>
+        <div>lnb</div>
+      </section>
+    </div>
+  </body>
+</html>
