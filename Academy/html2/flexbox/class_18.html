@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: 'Courier New', Courier, monospace;
+      }
+
+      .container {
+        width: 1200px;
+        margin: auto;
+        text-align: center;
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      header {
+        background-color: tomato;
+        flex: 1;
+        padding: 10px;
+      }
+
+      section {
+        display: flex;
+      }
+
+      section article {
+        padding: 30px 10px;
+      }
+
+      article.main {
+        background-color: gray;
+        order: 2;
+        flex: 4;
+      }
+
+      footer {
+        background-color: aqua;
+        flex: 1;
+        padding: 10px;
+      }
+
+      article.left {
+        background-color: yellow;
+        flex: 1;
+        order: 1;
+      }
+
+      article.right {
+        background-color: green;
+        flex: 1;
+        order: 3;
+      }
+
+      @media screen and (max-width: 768px) {
+        .container {
+          width: 100%;
+        }
+
+        section {
+          flex-direction: column;
+        }
+
+        article.main {
+          order: 1;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>Header</header>
+      <section>
+        <article class="main">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque
+            nostrum consequatur voluptas totam odio odit molestiae nesciunt
+            earum? Reprehenderit, est possimus. Exercitationem, pariatur! Iusto
+            blanditiis fugit, soluta architecto a dolores!
+          </p>
+        </article>
+        <article class="left">Aside 1</article>
+        <article class="right">Aside 2</article>
+      </section>
+      <footer>Footer</footer>
+    </div>
+  </body>
+</html>

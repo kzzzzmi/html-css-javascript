@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /*
+        null merge 연산자 ??
+        최근에 추가됨
+        a ?? b 의 평가
+        a가 null도 아니고 undefined도 아니면 a
+        그 외의 경우엔 b
+
+        x = (a !== null && a !== undefined) ? a : b;
+      */
+
+      let firstName = null;
+      let lastName = null;
+      let nickName = '바이올렛';
+
+      let myName = firstName ?? lastName ?? nickName;
+      console.log(myName);
+
+      let a = null;
+      let b;
+      let c = '이거지';
+      let ans = a ?? b ?? c;
+      console.log(ans);
+    </script>
+  </body>
+</html>

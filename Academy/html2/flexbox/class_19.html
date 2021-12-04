@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      .container {
+        width: 1129px;
+        margin: auto;
+      }
+
+      header {
+        background-color: tomato;
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      section {
+        display: flex;
+      }
+
+      section div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .box div:first-child {
+        background-color: gray;
+        order: 2;
+        flex: 4;
+      }
+
+      .box div:nth-child(2) {
+        background-color: yellow;
+        order: 1;
+        flex: 1;
+      }
+
+      .box div:last-child {
+        background-color: yellowgreen;
+        order: 3;
+        flex: 1;
+      }
+
+      footer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: cyan;
+      }
+
+      @media screen and (max-width: 768px) {
+        .container {
+          width: 100%;
+        }
+
+        section {
+          flex-direction: column;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>Header</header>
+      <section class="box">
+        <div>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem ut
+            sapiente repudiandae ducimus perspiciatis sunt facere veniam
+            delectus, sint hic fugit libero quasi molestiae nam dolore numquam
+            quia temporibus obcaecati.
+          </p>
+        </div>
+        <div>aside1</div>
+        <div>aside2</div>
+      </section>
+      <footer>Footer</footer>
+    </div>
+  </body>
+</html>
