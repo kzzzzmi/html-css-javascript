@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 화살표 함수
+
+      // // 함수 표현식
+      // let sum = function(a, b) {
+      //   return a + b;
+      // }
+
+      // 좀 더 간결하게 사용하는 방법
+      let sum = (a, b) => {
+        return a + b;
+      };
+      // alert(sum(100, 100));
+
+      // let double = n => n * 2;
+      let double = function (n) {
+        return n * 2;
+      };
+
+      // alert(double(2));
+
+      let sayHi = () => alert('안녕하세요');
+      // sayHi();
+
+      // let age = prompt('당신의 나이를 알려주세요', 19);
+
+      // let welcome = age < 19 ? () => alert('안녕') : () => alert('안녕하세요');
+      // welcome();
+
+      // 본문이 여러 줄인 화살표 함수
+      let sum2 = (a, b) => {
+        let result = a + b;
+        return result;
+      };
+
+      alert(sum2(1, 2));
+    </script>
+  </body>
+</html>
