@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // JSON
+      // Javascript Object Notation
+      // 자바스크립트 객체 표기법
+
+      // 클라이언트 - 서버
+      // 자바스크립트로 -- 문자열로 변환 name: 토니, , ,
+      // 자바로 사용 시문자열을 잘라서 객체를 만들고 매핑해줘야함
+      // 규칙, 약속, 표준 JSON 형식 : 편하게 사용할 수 있음
+      // let person = {'height' : 180, 'job' : 'programmer'};
+      // var members = ['홍길동', '김유신', '티모'];
+
+      let user = {
+        name: 'john',
+        age: 30,
+
+        toString() {
+          return 'name : "${this.name}", height : "${this.age}"';
+        },
+      };
+      console.log(user);
+
+      let student = {
+        name: 'hon',
+        age: 30,
+        isAdmin: false,
+        courses: ['html', 'css', 'js'],
+        wife: null,
+      };
+      // 객체를 json 문자열로 변경
+      let json = JSON.stringify(student);
+
+      console.log(typeof json);
+      console.log(json);
+
+      // 객체 {...}
+      // 배열 [...]
+      // 원시형 : 문자형,숫자형,불린형,null,undefined
+
+      // JSON.parse
+      // JSON 문자열로 인코딩된 것을 객체로 만들어줌
+      let userData =
+        '{"name": "John", "age": 35, "isAdmin": true, "friends": [0,1,2,3]}';
+      // 다시 객체로 만들어주는 과정
+      let strUser = JSON.parse(userData);
+      alert(strUser.name);
+    </script>
+  </body>
+</html>
